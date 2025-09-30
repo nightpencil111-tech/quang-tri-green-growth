@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Chiến Lược Tăng Trưởng Xanh Tỉnh Quảng Trị</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .kpi-card {
+            background-color: #f8fafc;
+            border-left: 5px solid;
+            transition: all 0.3s ease-in-out;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #00A5E3;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    <!-- Palette: Brilliant Blues (#00A5E3), Energetic & Playful (#FFBF65, #FF96C5), Fresh Greens (#8DD7BF) -->
+    <!-- Plan: Sections for Vision, KPIs/Results, Digital Transformation, Challenges/Solutions, and new Gemini Analysis Tool. -->
+    <!-- Visualizations: Bar chart for Environmental Goals (Chart.js), Large Text/KPIs for Digital Stats. -->
+    <!-- Constraint Check: NO SVG, NO MERMAID JS used. Charts via Chart.js/Canvas. -->
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#00A5E3] to-[#8DD7BF]">Quảng Trị: Hành Trình Tăng Trưởng Xanh</h1>
+            <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">Trực quan hóa chiến lược phát triển bền vững của tỉnh Quảng Trị đến năm 2030, tầm nhìn 2050, hướng tới một tương lai xanh và thịnh vượng.</p>
+        </header>
+
+        <main class="space-y-12">
+            <section id="vision">
+                <h2 class="text-3xl font-bold text-center mb-8">Tầm Nhìn & Mục Tiêu Chiến Lược</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center transition hover:shadow-2xl">
+                        <div class="text-5xl mb-4">⚡️</div>
+                        <h3 class="text-xl font-bold text-[#00A5E3]">Trung tâm Năng lượng Sạch</h3>
+                        <p class="text-slate-600 mt-2">Xây dựng Quảng Trị thành trung tâm năng lượng tái tạo của miền Trung, tận dụng tiềm năng gió và mặt trời.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center transition hover:shadow-2xl">
+                        <div class="text-5xl mb-4">🌿</div>
+                        <h3 class="text-xl font-bold text-[#8DD7BF]">Nông nghiệp Hữu cơ & Công nghệ cao</h3>
+                        <p class="text-slate-600 mt-2">Phát triển các mô hình nông nghiệp sạch, hữu cơ và ứng dụng công nghệ cao để nâng cao giá trị sản phẩm.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 text-center transition hover:shadow-2xl">
+                         <div class="text-5xl mb-4">✈️</div>
+                        <h3 class="text-xl font-bold text-[#FFBF65]">Du lịch Xanh & Logistics</h3>
+                        <p class="text-slate-600 mt-2">Thúc đẩy du lịch sinh thái, bền vững và phát triển hạ tầng logistics hiện đại, thân thiện môi trường.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="kpi">
+                <h2 class="text-3xl font-bold text-center mb-8">Kết Quả Nổi Bật (2017-2022)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center">Hiện Trạng Tài Nguyên Rừng</h3>
+                        <p class="text-slate-600 mb-6 text-center">Quảng Trị cho thấy cam kết mạnh mẽ trong việc bảo vệ và phát triển tài nguyên rừng, nền tảng cho sự phát triển bền vững.</p>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div>
+                                <span class="text-4xl font-extrabold text-[#8DD7BF]">60,8%</span>
+                                <p class="text-slate-500">Diện tích quy hoạch cho lâm nghiệp</p>
+                            </div>
+                            <div>
+                                <span class="text-4xl font-extrabold text-[#00A5E3]">49,9%</span>
+                                <p class="text-slate-500">Độ che phủ rừng toàn tỉnh</p>
+                            </div>
+                        </div>
+                         <p class="text-center text-slate-600 mt-6">Hàng năm, tỉnh trồng mới từ <span class="font-bold text-[#8DD7BF]">7.200</span> đến <span class="font-bold text-[#8DD7BF]">12.500 ha</span> rừng.</p>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-4 text-center">Mục Tiêu Hạ Tầng Môi Trường</h3>
+                         <p class="text-slate-600 mb-6 text-center">Tỉnh đặt mục tiêu cao về cung cấp nước sạch và xử lý rác thải, đảm bảo chất lượng sống cho người dân.</p>
+                        <div class="chart-container">
+                            <canvas id="environmentChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="digital-transformation">
+                <h2 class="text-3xl font-bold text-center mb-8">Trụ Cột Tăng Trưởng: Chuyển Đổi Số</h2>
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="kpi-card p-4 rounded-lg" style="border-color: #00A5E3;">
+                            <p class="text-4xl font-extrabold text-[#00A5E3]">737</p>
+                            <p class="text-slate-600 font-semibold mt-2">Doanh nghiệp công nghệ số</p>
+                        </div>
+                        <div class="kpi-card p-4 rounded-lg" style="border-color: #8DD7BF;">
+                            <p class="text-4xl font-extrabold text-[#8DD7BF]">113,335</p>
+                            <p class="text-slate-600 font-semibold mt-2">Hộ nông nghiệp được đào tạo kỹ năng số</p>
+                        </div>
+                         <div class="kpi-card p-4 rounded-lg" style="border-color: #FFBF65;">
+                            <p class="text-4xl font-extrabold text-[#FFBF65]">55%</p>
+                            <p class="text-slate-600 font-semibold mt-2">Hộ nông nghiệp tham gia sàn TMĐT</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-8 text-slate-600 max-w-3xl mx-auto">Chuyển đổi số là đòn bẩy quan trọng, giúp minh bạch hóa nguồn gốc sản phẩm, mở rộng thị trường cho nông sản sạch và tối ưu hóa quy trình sản xuất theo hướng bền vững.</p>
+                </div>
+            </section>
+            
+            <section id="gemini-analysis" class="mt-12">
+                <h2 class="text-3xl font-bold text-center mb-8 text-[#00A5E3]">✨ Phân Tích Tăng Trưởng Xanh cùng Gemini</h2>
+                <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-4 border-[#FFBF65]/50">
+                    <p class="text-slate-600 mb-6 text-center max-w-3xl mx-auto">Sử dụng trí tuệ nhân tạo để phân tích sâu hơn các khái niệm, chính sách, hoặc đề xuất giải pháp sáng tạo cho chiến lược Tăng trưởng Xanh của Quảng Trị.</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-4 mb-6">
+                        <input type="text" id="promptInput" placeholder="Ví dụ: Phân tích lợi ích của mô hình Cà phê Vườn Rừng?" class="flex-grow p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00A5E3] focus:border-[#00A5E3] text-slate-700">
+                        <button id="analyzeButton" class="bg-[#00A5E3] hover:bg-[#00A5E3]/80 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 flex items-center justify-center disabled:opacity-50">
+                            ✨ Phân Tích
+                        </button>
+                    </div>
+
+                    <div id="loadingIndicator" class="loading-spinner mx-auto mb-4"></div>
+
+                    <div id="resultsOutput" class="mt-4 p-4 min-h-20 bg-slate-50 border border-slate-200 rounded-lg text-slate-700 whitespace-pre-wrap">
+                        <!-- Kết quả phân tích sẽ hiển thị ở đây -->
+                        <p class="text-center text-slate-500">Nhập câu hỏi và nhấn '✨ Phân Tích' để nhận kết quả.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="challenges-solutions">
+                <h2 class="text-3xl font-bold text-center mb-8">Thách Thức & Lộ Trình Giải Pháp</h2>
+                 <p class="text-center mt-4 mb-8 text-lg text-slate-600 max-w-3xl mx-auto">Nhận diện rõ các thách thức là bước đầu tiên để xây dựng các giải pháp chiến lược, đảm bảo mục tiêu tăng trưởng xanh được thực hiện hiệu quả.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-t-8 border-[#FF5768]">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="text-3xl mr-3">⚠️</span> Thách Thức</h3>
+                        <ul class="space-y-4 list-inside text-slate-600">
+                            <li><strong class="text-slate-800">Cân bằng phát triển:</strong> Áp lực giữa thu hút đầu tư, phát triển hạ tầng và mục tiêu bảo vệ tài nguyên rừng.</li>
+                            <li><strong class="text-slate-800">Chuyển đổi mô hình:</strong> Khó khăn trong việc thay đổi tập quán sản xuất truyền thống sang mô hình nông nghiệp công nghệ cao, hữu cơ.</li>
+                            <li><strong class="text-slate-800">Nâng cao năng lực:</strong> Nhu cầu lớn về đào tạo kỹ thuật, hỗ trợ tài chính và kết nối thị trường cho người dân và doanh nghiệp.</li>
+                        </ul>
+                    </div>
+                     <div class="bg-white rounded-2xl shadow-lg p-8 border-t-8 border-[#00A5E3]">
+                        <h3 class="text-2xl font-bold mb-4 flex items-center"><span class="text-3xl mr-3">💡</span> Giải Pháp Chiến Lược</h3>
+                        <ul class="space-y-4 list-inside text-slate-600">
+                            <li><strong class="text-slate-800">Hoàn thiện thể chế:</strong> Xây dựng chính sách ưu đãi, khuyến khích các dự án đầu tư xanh, công nghệ sạch.</li>
+                            <li><strong class="text-slate-800">Phát triển nông nghiệp bền vững:</strong> Tập trung vào nông nghiệp hữu cơ, ứng dụng công nghệ cao để tăng giá trị và sức cạnh tranh.</li>
+                            <li><strong class="text-slate-800">Đẩy mạnh Chuyển đổi số:</strong> Xây dựng chính quyền số, kinh tế số và xã hội số để tạo nền tảng phát triển minh bạch, hiệu quả.</li>
+                             <li><strong class="text-slate-800">Mở rộng hợp tác:</strong> Tăng cường hợp tác quốc tế và liên vùng để huy động nguồn lực, công nghệ và kinh nghiệm.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 py-8 border-t">
+            <p class="text-slate-500">Nguồn dữ liệu: Tài liệu Giáo dục Địa phương tỉnh Quảng Trị - Lớp 12.</p>
+            <p class="text-slate-500">Infographic được thiết kế và phát triển để trực quan hóa dữ liệu.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label, maxLength = 16) => {
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).trim().length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = word;
+                } else {
+                    currentLine = (currentLine + ' ' + word).trim();
+                }
+            }
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const chartColors = {
+            blue: '#00A5E3',
+            green: '#8DD7BF',
+            yellow: '#FFBF65',
+            pink: '#FF96C5',
+            red: '#FF5768'
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctxEnv = document.getElementById('environmentChart')?.getContext('2d');
+            if (ctxEnv) {
+                new Chart(ctxEnv, {
+                    type: 'bar',
+                    data: {
+                        labels: [
+                            wrapLabel('Dân số đô thị được cung cấp nước sạch'), 
+                            wrapLabel('Dân số nông thôn có nước hợp vệ sinh'), 
+                            wrapLabel('Rác thải rắn đô thị được thu gom/xử lý')
+                        ],
+                        datasets: [{
+                            label: 'Tỷ lệ Mục tiêu (%)',
+                            data: [99, 98, 98],
+                            backgroundColor: [chartColors.blue, chartColors.green, chartColors.yellow],
+                            borderColor: [chartColors.blue, chartColors.green, chartColors.yellow],
+                            borderWidth: 1,
+                            borderRadius: 5,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    callback: function(value) {
+                                        return value + '%'
+                                    }
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    title: tooltipTitleCallback,
+                                    label: function(context) {
+                                        return `Mục tiêu: ${context.raw}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const promptInput = document.getElementById('promptInput');
+            const analyzeButton = document.getElementById('analyzeButton');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const resultsOutput = document.getElementById('resultsOutput');
+
+            const systemPrompt = "Bạn là chuyên gia phân tích về Phát triển Bền vững và Tăng trưởng Xanh. Nhiệm vụ của bạn là phân tích và trả lời các câu hỏi của người dùng một cách chính xác, chi tiết, sử dụng tông giọng chuyên nghiệp và thân thiện. Khi trả lời, hãy tóm tắt thông tin thành một đoạn văn ngắn gọn (tối đa 5-7 câu) hoặc một danh sách gạch đầu dòng rõ ràng. Phân tích phải có bối cảnh liên quan đến chiến lược Tăng trưởng Xanh của tỉnh Quảng Trị nếu có thể.";
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const runGeminiAnalysis = async (query) => {
+                const payload = {
+                    contents: [{ parts: [{ text: query }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                };
+
+                const maxRetries = 5;
+                let attempt = 0;
+
+                while (attempt < maxRetries) {
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (response.ok) {
+                            const result = await response.json();
+                            const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "Không thể tạo ra câu trả lời. Vui lòng thử lại.";
+                            return text;
+                        } else if (response.status === 429) {
+                            const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            attempt++;
+                            continue;
+                        } else {
+                            console.error("API error:", response.status, response.statusText);
+                            return `Lỗi API: Không thể hoàn thành yêu cầu (Mã ${response.status}).`;
+                        }
+                    } catch (error) {
+                        console.error("Fetch error:", error);
+                        const delay = Math.pow(2, attempt) * 1000 + Math.random() * 1000;
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        attempt++;
+                    }
+                }
+                return "Hệ thống bận. Vui lòng thử lại sau ít phút.";
+            };
+
+            const handleAnalysis = async () => {
+                const query = promptInput.value.trim();
+                if (!query) {
+                    resultsOutput.innerHTML = `<p class="text-center text-[#FF5768]">Vui lòng nhập câu hỏi để bắt đầu phân tích.</p>`;
+                    return;
+                }
+
+                analyzeButton.disabled = true;
+                loadingIndicator.style.display = 'block';
+                resultsOutput.innerHTML = `<p class="text-center text-slate-500">Đang phân tích dữ liệu...</p>`;
+
+                const fullPrompt = `Phân tích câu hỏi sau đây: "${query}". Đảm bảo trả lời bằng tiếng Việt và giữ nội dung liên quan đến Tăng trưởng Xanh / Phát triển Bền vững, đặc biệt trong bối cảnh địa phương (Quảng Trị, Việt Nam).`;
+                
+                const resultText = await runGeminiAnalysis(fullPrompt);
+
+                resultsOutput.innerHTML = resultText;
+                analyzeButton.disabled = false;
+                loadingIndicator.style.display = 'none';
+            };
+
+            analyzeButton.addEventListener('click', handleAnalysis);
+            promptInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    handleAnalysis();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
